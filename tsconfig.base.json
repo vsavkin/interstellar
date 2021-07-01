@@ -15,6 +15,66 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@interstellar/crew/important-feature-0": [
+        "libs/crew/important-feature-0/src/index.ts"
+      ],
+      "@interstellar/crew/important-feature-1": [
+        "libs/crew/important-feature-1/src/index.ts"
+      ],
+      "@interstellar/crew/important-feature-10": [
+        "libs/crew/important-feature-10/src/index.ts"
+      ],
+      "@interstellar/crew/important-feature-11": [
+        "libs/crew/important-feature-11/src/index.ts"
+      ],
+      "@interstellar/crew/important-feature-12": [
+        "libs/crew/important-feature-12/src/index.ts"
+      ],
+      "@interstellar/crew/important-feature-13": [
+        "libs/crew/important-feature-13/src/index.ts"
+      ],
+      "@interstellar/crew/important-feature-14": [
+        "libs/crew/important-feature-14/src/index.ts"
+      ],
+      "@interstellar/crew/important-feature-15": [
+        "libs/crew/important-feature-15/src/index.ts"
+      ],
+      "@interstellar/crew/important-feature-16": [
+        "libs/crew/important-feature-16/src/index.ts"
+      ],
+      "@interstellar/crew/important-feature-17": [
+        "libs/crew/important-feature-17/src/index.ts"
+      ],
+      "@interstellar/crew/important-feature-18": [
+        "libs/crew/important-feature-18/src/index.ts"
+      ],
+      "@interstellar/crew/important-feature-19": [
+        "libs/crew/important-feature-19/src/index.ts"
+      ],
+      "@interstellar/crew/important-feature-2": [
+        "libs/crew/important-feature-2/src/index.ts"
+      ],
+      "@interstellar/crew/important-feature-3": [
+        "libs/crew/important-feature-3/src/index.ts"
+      ],
+      "@interstellar/crew/important-feature-4": [
+        "libs/crew/important-feature-4/src/index.ts"
+      ],
+      "@interstellar/crew/important-feature-5": [
+        "libs/crew/important-feature-5/src/index.ts"
+      ],
+      "@interstellar/crew/important-feature-6": [
+        "libs/crew/important-feature-6/src/index.ts"
+      ],
+      "@interstellar/crew/important-feature-7": [
+        "libs/crew/important-feature-7/src/index.ts"
+      ],
+      "@interstellar/crew/important-feature-8": [
+        "libs/crew/important-feature-8/src/index.ts"
+      ],
+      "@interstellar/crew/important-feature-9": [
+        "libs/crew/important-feature-9/src/index.ts"
+      ],
       "@interstellar/flight-simulator/important-feature-0": [
         "libs/flight-simulator/important-feature-0/src/index.ts"
       ],

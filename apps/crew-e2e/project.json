@@ -1,0 +1,28 @@
+{
+  "root": "apps/crew-e2e",
+  "sourceRoot": "apps/crew-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/crew-e2e/cypress.json",
+        "tsConfig": "apps/crew-e2e/tsconfig.e2e.json",
+        "devServerTarget": "crew:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "crew:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["apps/crew-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["crew"]
+}
