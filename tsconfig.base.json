@@ -15,6 +15,66 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@interstellar/flight-simulator/important-feature-0": [
+        "libs/flight-simulator/important-feature-0/src/index.ts"
+      ],
+      "@interstellar/flight-simulator/important-feature-1": [
+        "libs/flight-simulator/important-feature-1/src/index.ts"
+      ],
+      "@interstellar/flight-simulator/important-feature-10": [
+        "libs/flight-simulator/important-feature-10/src/index.ts"
+      ],
+      "@interstellar/flight-simulator/important-feature-11": [
+        "libs/flight-simulator/important-feature-11/src/index.ts"
+      ],
+      "@interstellar/flight-simulator/important-feature-12": [
+        "libs/flight-simulator/important-feature-12/src/index.ts"
+      ],
+      "@interstellar/flight-simulator/important-feature-13": [
+        "libs/flight-simulator/important-feature-13/src/index.ts"
+      ],
+      "@interstellar/flight-simulator/important-feature-14": [
+        "libs/flight-simulator/important-feature-14/src/index.ts"
+      ],
+      "@interstellar/flight-simulator/important-feature-15": [
+        "libs/flight-simulator/important-feature-15/src/index.ts"
+      ],
+      "@interstellar/flight-simulator/important-feature-16": [
+        "libs/flight-simulator/important-feature-16/src/index.ts"
+      ],
+      "@interstellar/flight-simulator/important-feature-17": [
+        "libs/flight-simulator/important-feature-17/src/index.ts"
+      ],
+      "@interstellar/flight-simulator/important-feature-18": [
+        "libs/flight-simulator/important-feature-18/src/index.ts"
+      ],
+      "@interstellar/flight-simulator/important-feature-19": [
+        "libs/flight-simulator/important-feature-19/src/index.ts"
+      ],
+      "@interstellar/flight-simulator/important-feature-2": [
+        "libs/flight-simulator/important-feature-2/src/index.ts"
+      ],
+      "@interstellar/flight-simulator/important-feature-3": [
+        "libs/flight-simulator/important-feature-3/src/index.ts"
+      ],
+      "@interstellar/flight-simulator/important-feature-4": [
+        "libs/flight-simulator/important-feature-4/src/index.ts"
+      ],
+      "@interstellar/flight-simulator/important-feature-5": [
+        "libs/flight-simulator/important-feature-5/src/index.ts"
+      ],
+      "@interstellar/flight-simulator/important-feature-6": [
+        "libs/flight-simulator/important-feature-6/src/index.ts"
+      ],
+      "@interstellar/flight-simulator/important-feature-7": [
+        "libs/flight-simulator/important-feature-7/src/index.ts"
+      ],
+      "@interstellar/flight-simulator/important-feature-8": [
+        "libs/flight-simulator/important-feature-8/src/index.ts"
+      ],
+      "@interstellar/flight-simulator/important-feature-9": [
+        "libs/flight-simulator/important-feature-9/src/index.ts"
+      ],
       "@interstellar/shared/alerts": ["libs/shared/alerts/src/index.ts"],
       "@interstellar/shared/buttons": ["libs/shared/buttons/src/index.ts"],
       "@interstellar/shared/components": [

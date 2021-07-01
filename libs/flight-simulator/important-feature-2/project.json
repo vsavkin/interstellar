@@ -1,0 +1,24 @@
+{
+  "root": "libs/flight-simulator/important-feature-2",
+  "sourceRoot": "libs/flight-simulator/important-feature-2/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/flight-simulator/important-feature-2/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/flight-simulator/important-feature-2"],
+      "options": {
+        "jestConfig": "libs/flight-simulator/important-feature-2/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}
