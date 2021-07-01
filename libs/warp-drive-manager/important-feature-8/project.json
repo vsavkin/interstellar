@@ -1,0 +1,24 @@
+{
+  "root": "libs/warp-drive-manager/important-feature-8",
+  "sourceRoot": "libs/warp-drive-manager/important-feature-8/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/warp-drive-manager/important-feature-8/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/warp-drive-manager/important-feature-8"],
+      "options": {
+        "jestConfig": "libs/warp-drive-manager/important-feature-8/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

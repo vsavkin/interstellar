@@ -1,0 +1,28 @@
+{
+  "root": "apps/warp-drive-manager-e2e",
+  "sourceRoot": "apps/warp-drive-manager-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/warp-drive-manager-e2e/cypress.json",
+        "tsConfig": "apps/warp-drive-manager-e2e/tsconfig.e2e.json",
+        "devServerTarget": "warp-drive-manager:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "warp-drive-manager:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["apps/warp-drive-manager-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["warp-drive-manager"]
+}

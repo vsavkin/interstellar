@@ -81,7 +81,67 @@
         "libs/shared/components/src/index.ts"
       ],
       "@interstellar/shared/dialogs": ["libs/shared/dialogs/src/index.ts"],
-      "@interstellar/shared/icons": ["libs/shared/icons/src/index.ts"]
+      "@interstellar/shared/icons": ["libs/shared/icons/src/index.ts"],
+      "@interstellar/warp-drive-manager/important-feature-0": [
+        "libs/warp-drive-manager/important-feature-0/src/index.ts"
+      ],
+      "@interstellar/warp-drive-manager/important-feature-1": [
+        "libs/warp-drive-manager/important-feature-1/src/index.ts"
+      ],
+      "@interstellar/warp-drive-manager/important-feature-10": [
+        "libs/warp-drive-manager/important-feature-10/src/index.ts"
+      ],
+      "@interstellar/warp-drive-manager/important-feature-11": [
+        "libs/warp-drive-manager/important-feature-11/src/index.ts"
+      ],
+      "@interstellar/warp-drive-manager/important-feature-12": [
+        "libs/warp-drive-manager/important-feature-12/src/index.ts"
+      ],
+      "@interstellar/warp-drive-manager/important-feature-13": [
+        "libs/warp-drive-manager/important-feature-13/src/index.ts"
+      ],
+      "@interstellar/warp-drive-manager/important-feature-14": [
+        "libs/warp-drive-manager/important-feature-14/src/index.ts"
+      ],
+      "@interstellar/warp-drive-manager/important-feature-15": [
+        "libs/warp-drive-manager/important-feature-15/src/index.ts"
+      ],
+      "@interstellar/warp-drive-manager/important-feature-16": [
+        "libs/warp-drive-manager/important-feature-16/src/index.ts"
+      ],
+      "@interstellar/warp-drive-manager/important-feature-17": [
+        "libs/warp-drive-manager/important-feature-17/src/index.ts"
+      ],
+      "@interstellar/warp-drive-manager/important-feature-18": [
+        "libs/warp-drive-manager/important-feature-18/src/index.ts"
+      ],
+      "@interstellar/warp-drive-manager/important-feature-19": [
+        "libs/warp-drive-manager/important-feature-19/src/index.ts"
+      ],
+      "@interstellar/warp-drive-manager/important-feature-2": [
+        "libs/warp-drive-manager/important-feature-2/src/index.ts"
+      ],
+      "@interstellar/warp-drive-manager/important-feature-3": [
+        "libs/warp-drive-manager/important-feature-3/src/index.ts"
+      ],
+      "@interstellar/warp-drive-manager/important-feature-4": [
+        "libs/warp-drive-manager/important-feature-4/src/index.ts"
+      ],
+      "@interstellar/warp-drive-manager/important-feature-5": [
+        "libs/warp-drive-manager/important-feature-5/src/index.ts"
+      ],
+      "@interstellar/warp-drive-manager/important-feature-6": [
+        "libs/warp-drive-manager/important-feature-6/src/index.ts"
+      ],
+      "@interstellar/warp-drive-manager/important-feature-7": [
+        "libs/warp-drive-manager/important-feature-7/src/index.ts"
+      ],
+      "@interstellar/warp-drive-manager/important-feature-8": [
+        "libs/warp-drive-manager/important-feature-8/src/index.ts"
+      ],
+      "@interstellar/warp-drive-manager/important-feature-9": [
+        "libs/warp-drive-manager/important-feature-9/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]
