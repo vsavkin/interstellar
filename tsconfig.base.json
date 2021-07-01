@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@interstellar/shared/alerts": ["libs/shared/alerts/src/index.ts"],
+      "@interstellar/shared/buttons": ["libs/shared/buttons/src/index.ts"],
       "@interstellar/shared/components": [
         "libs/shared/components/src/index.ts"
       ],

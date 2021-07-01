@@ -4,5 +4,6 @@ module.exports = {
     '<rootDir>/libs/shared/alerts',
     '<rootDir>/libs/shared/dialogs',
     '<rootDir>/libs/shared/icons',
+    '<rootDir>/libs/shared/buttons',
   ],
 };

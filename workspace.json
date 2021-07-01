@@ -2,6 +2,7 @@
   "version": 2,
   "projects": {
     "shared-alerts": "libs/shared/alerts",
+    "shared-buttons": "libs/shared/buttons",
     "shared-components": "libs/shared/components",
     "shared-dialogs": "libs/shared/dialogs",
     "shared-icons": "libs/shared/icons"
