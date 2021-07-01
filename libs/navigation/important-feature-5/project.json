@@ -1,0 +1,24 @@
+{
+  "root": "libs/navigation/important-feature-5",
+  "sourceRoot": "libs/navigation/important-feature-5/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/navigation/important-feature-5/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/navigation/important-feature-5"],
+      "options": {
+        "jestConfig": "libs/navigation/important-feature-5/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

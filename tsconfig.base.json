@@ -135,6 +135,66 @@
       "@interstellar/flight-simulator/important-feature-9": [
         "libs/flight-simulator/important-feature-9/src/index.ts"
       ],
+      "@interstellar/navigation/important-feature-0": [
+        "libs/navigation/important-feature-0/src/index.ts"
+      ],
+      "@interstellar/navigation/important-feature-1": [
+        "libs/navigation/important-feature-1/src/index.ts"
+      ],
+      "@interstellar/navigation/important-feature-10": [
+        "libs/navigation/important-feature-10/src/index.ts"
+      ],
+      "@interstellar/navigation/important-feature-11": [
+        "libs/navigation/important-feature-11/src/index.ts"
+      ],
+      "@interstellar/navigation/important-feature-12": [
+        "libs/navigation/important-feature-12/src/index.ts"
+      ],
+      "@interstellar/navigation/important-feature-13": [
+        "libs/navigation/important-feature-13/src/index.ts"
+      ],
+      "@interstellar/navigation/important-feature-14": [
+        "libs/navigation/important-feature-14/src/index.ts"
+      ],
+      "@interstellar/navigation/important-feature-15": [
+        "libs/navigation/important-feature-15/src/index.ts"
+      ],
+      "@interstellar/navigation/important-feature-16": [
+        "libs/navigation/important-feature-16/src/index.ts"
+      ],
+      "@interstellar/navigation/important-feature-17": [
+        "libs/navigation/important-feature-17/src/index.ts"
+      ],
+      "@interstellar/navigation/important-feature-18": [
+        "libs/navigation/important-feature-18/src/index.ts"
+      ],
+      "@interstellar/navigation/important-feature-19": [
+        "libs/navigation/important-feature-19/src/index.ts"
+      ],
+      "@interstellar/navigation/important-feature-2": [
+        "libs/navigation/important-feature-2/src/index.ts"
+      ],
+      "@interstellar/navigation/important-feature-3": [
+        "libs/navigation/important-feature-3/src/index.ts"
+      ],
+      "@interstellar/navigation/important-feature-4": [
+        "libs/navigation/important-feature-4/src/index.ts"
+      ],
+      "@interstellar/navigation/important-feature-5": [
+        "libs/navigation/important-feature-5/src/index.ts"
+      ],
+      "@interstellar/navigation/important-feature-6": [
+        "libs/navigation/important-feature-6/src/index.ts"
+      ],
+      "@interstellar/navigation/important-feature-7": [
+        "libs/navigation/important-feature-7/src/index.ts"
+      ],
+      "@interstellar/navigation/important-feature-8": [
+        "libs/navigation/important-feature-8/src/index.ts"
+      ],
+      "@interstellar/navigation/important-feature-9": [
+        "libs/navigation/important-feature-9/src/index.ts"
+      ],
       "@interstellar/shared/alerts": ["libs/shared/alerts/src/index.ts"],
       "@interstellar/shared/buttons": ["libs/shared/buttons/src/index.ts"],
       "@interstellar/shared/components": [
