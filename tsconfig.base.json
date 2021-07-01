@@ -19,7 +19,8 @@
       "@interstellar/shared/components": [
         "libs/shared/components/src/index.ts"
       ],
-      "@interstellar/shared/dialogs": ["libs/shared/dialogs/src/index.ts"]
+      "@interstellar/shared/dialogs": ["libs/shared/dialogs/src/index.ts"],
+      "@interstellar/shared/icons": ["libs/shared/icons/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

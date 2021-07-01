@@ -3,7 +3,8 @@
   "projects": {
     "shared-alerts": "libs/shared/alerts",
     "shared-components": "libs/shared/components",
-    "shared-dialogs": "libs/shared/dialogs"
+    "shared-dialogs": "libs/shared/dialogs",
+    "shared-icons": "libs/shared/icons"
   },
   "cli": {
     "defaultCollection": "@nrwl/next"
