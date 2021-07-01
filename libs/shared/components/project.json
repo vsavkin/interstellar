@@ -1,0 +1,41 @@
+{
+  "root": "libs/shared/components",
+  "sourceRoot": "libs/shared/components/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:package",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/shared/components",
+        "tsConfig": "libs/shared/components/tsconfig.lib.json",
+        "project": "libs/shared/components/package.json",
+        "entryFile": "libs/shared/components/src/index.ts",
+        "external": ["react/jsx-runtime"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "assets": [
+          {
+            "glob": "libs/shared/components/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/shared/components/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/components"],
+      "options": {
+        "jestConfig": "libs/shared/components/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

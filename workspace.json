@@ -1,7 +1,16 @@
 {
   "version": 2,
-  "projects": {},
+  "projects": {
+    "shared-components": "libs/shared/components"
+  },
   "cli": {
-    "defaultCollection": "@nrwl/workspace"
+    "defaultCollection": "@nrwl/next"
+  },
+  "generators": {
+    "@nrwl/react": {
+      "application": {
+        "babel": true
+      }
+    }
   }
 }
