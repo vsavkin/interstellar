@@ -1,0 +1,24 @@
+{
+  "root": "libs/ticket-booking/important-feature-17",
+  "sourceRoot": "libs/ticket-booking/important-feature-17/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/ticket-booking/important-feature-17/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/ticket-booking/important-feature-17"],
+      "options": {
+        "jestConfig": "libs/ticket-booking/important-feature-17/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

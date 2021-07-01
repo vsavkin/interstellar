@@ -1,0 +1,28 @@
+{
+  "root": "apps/ticket-booking-e2e",
+  "sourceRoot": "apps/ticket-booking-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/ticket-booking-e2e/cypress.json",
+        "tsConfig": "apps/ticket-booking-e2e/tsconfig.e2e.json",
+        "devServerTarget": "ticket-booking:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "ticket-booking:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["apps/ticket-booking-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["ticket-booking"]
+}
