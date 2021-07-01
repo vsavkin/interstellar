@@ -16,7 +16,10 @@
     "baseUrl": ".",
     "paths": {
       "@interstellar/shared/alerts": ["libs/shared/alerts/src/index.ts"],
-      "@interstellar/shared/components": ["libs/shared/components/src/index.ts"]
+      "@interstellar/shared/components": [
+        "libs/shared/components/src/index.ts"
+      ],
+      "@interstellar/shared/dialogs": ["libs/shared/dialogs/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
