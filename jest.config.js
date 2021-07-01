@@ -1,3 +1,6 @@
 module.exports = {
-  projects: ['<rootDir>/libs/shared/components'],
+  projects: [
+    '<rootDir>/libs/shared/components',
+    '<rootDir>/libs/shared/alerts',
+  ],
 };

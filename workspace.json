@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "shared-alerts": "libs/shared/alerts",
     "shared-components": "libs/shared/components"
   },
   "cli": {
