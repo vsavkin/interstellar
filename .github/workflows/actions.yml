@@ -8,7 +8,7 @@ on:
 
 env:
   NX_CLOUD_DISTRIBUTED_EXECUTION: 'true'
-  NODE_OPTIONS: "--max_old_space_size=4096"
+  NODE_OPTIONS: '--max_old_space_size=4096'
 
 jobs:
   agents:
@@ -17,7 +17,7 @@ jobs:
     timeout-minutes: 60
     strategy:
       matrix:
-        agent: [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ]
+        agent: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -45,8 +45,8 @@ jobs:
         uses: JamesHenry/parallel-bash-commands@v0.1
         with:
           cmd1: npx nx affected --target=build --parallel=1
-          cmd2: npx nx affected --target=test --parallel=5
-          cmd3: npx nx affected --target=lint --parallel=5
+          cmd2: npx nx affected --target=test --parallel=3
+          cmd3: npx nx affected --target=lint --parallel=3
           cmd4: npx nx affected --target=e2e --parallel=1
       - run: npx nx-cloud stop-all-agents
       - name: Tag main branch if all jobs succeed
@@ -73,7 +73,7 @@ jobs:
         uses: JamesHenry/parallel-bash-commands@v0.1
         with:
           cmd1: npx nx affected --target=build --parallel=1
-          cmd2: npx nx affected --target=test --parallel=5
-          cmd3: npx nx affected --target=lint --parallel=5
+          cmd2: npx nx affected --target=test --parallel=1
+          cmd3: npx nx affected --target=lint --parallel=3
           cmd4: npx nx affected --target=e2e --parallel=1
       - run: npx nx-cloud stop-all-agents

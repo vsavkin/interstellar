@@ -1,3 +1,3 @@
 const nxPreset = require('@nrwl/jest/preset');
 
-module.exports = { ...nxPreset, maxWorkers: 4 };
+module.exports = { ...nxPreset, maxWorkers: 1 };
