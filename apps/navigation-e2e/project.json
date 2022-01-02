@@ -20,7 +20,8 @@
       "executor": "@nrwl/linter:eslint",
       "options": {
         "lintFilePatterns": ["apps/navigation-e2e/**/*.{js,ts}"]
-      }
+      },
+      "outputs": ["{options.outputFile}"]
     }
   },
   "tags": [],

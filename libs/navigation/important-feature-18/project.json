@@ -10,7 +10,8 @@
         "lintFilePatterns": [
           "libs/navigation/important-feature-18/**/*.{ts,tsx,js,jsx}"
         ]
-      }
+      },
+      "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nrwl/jest:jest",

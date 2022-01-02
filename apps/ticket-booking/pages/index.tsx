@@ -19,7 +19,6 @@ export function Index() {
           {' '}
           If you like Nx, please give it a star:
           <div className="github-star-badge">
-            <img src="/star.svg" className="material-icons" alt="" />
             Star
           </div>
         </a>

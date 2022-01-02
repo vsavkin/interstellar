@@ -116,22 +116,5 @@
     "warp-drive-manager-important-feature-7": "libs/warp-drive-manager/important-feature-7",
     "warp-drive-manager-important-feature-8": "libs/warp-drive-manager/important-feature-8",
     "warp-drive-manager-important-feature-9": "libs/warp-drive-manager/important-feature-9"
-  },
-  "cli": {
-    "defaultCollection": "@nrwl/next"
-  },
-  "generators": {
-    "@nrwl/react": {
-      "application": {
-        "babel": true
-      }
-    },
-    "@nrwl/next": {
-      "application": {
-        "style": "css",
-        "linter": "eslint"
-      }
-    }
-  },
-  "defaultProject": "flight-simulator"
+  }
 }

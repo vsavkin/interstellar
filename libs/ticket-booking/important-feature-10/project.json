@@ -10,7 +10,8 @@
         "lintFilePatterns": [
           "libs/ticket-booking/important-feature-10/**/*.{ts,tsx,js,jsx}"
         ]
-      }
+      },
+      "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nrwl/jest:jest",

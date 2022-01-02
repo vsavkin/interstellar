@@ -10,7 +10,8 @@
         "lintFilePatterns": [
           "libs/warp-drive-manager/important-feature-12/**/*.{ts,tsx,js,jsx}"
         ]
-      }
+      },
+      "outputs": ["{options.outputFile}"]
     },
     "test": {
       "executor": "@nrwl/jest:jest",
