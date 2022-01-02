@@ -45,8 +45,8 @@ jobs:
         uses: JamesHenry/parallel-bash-commands@v0.1
         with:
           cmd1: npx nx affected --target=build --parallel=1
-          cmd2: npx nx affected --target=test --parallel=5
-          cmd3: npx nx affected --target=lint --parallel=5
+          cmd2: npx nx affected --target=test --parallel=3
+          cmd3: npx nx affected --target=lint --parallel=3
           cmd4: npx nx affected --target=e2e --parallel=1
       - run: npx nx-cloud stop-all-agents
       - name: Tag main branch if all jobs succeed
@@ -73,7 +73,7 @@ jobs:
         uses: JamesHenry/parallel-bash-commands@v0.1
         with:
           cmd1: npx nx affected --target=build --parallel=1
-          cmd2: npx nx affected --target=test --parallel=5
-          cmd3: npx nx affected --target=lint --parallel=5
+          cmd2: npx nx affected --target=test --parallel=1
+          cmd3: npx nx affected --target=lint --parallel=3
           cmd4: npx nx affected --target=e2e --parallel=1
       - run: npx nx-cloud stop-all-agents
