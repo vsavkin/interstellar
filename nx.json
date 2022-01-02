@@ -4,10 +4,7 @@
     "defaultBase": "main"
   },
   "implicitDependencies": {
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
+    "package.json": "*",
     "nx.json": "*",
     ".eslintrc.json": "*"
   },
