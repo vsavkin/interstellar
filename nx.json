@@ -4,17 +4,15 @@
     "defaultBase": "main"
   },
   "implicitDependencies": {
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
+    "package.json": "*",
+    "nx.json": "*",
     ".eslintrc.json": "*"
   },
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/nx-cloud",
       "options": {
-        "useDaemonProcess": false,
+        "useDaemonProcess": true,
         "cacheableOperations": ["build", "lint", "test", "e2e"],
         "accessToken": "ZTQ2NzFkMTgtNmI3MS00NzE2LWI5MmItNzRmMGFiMDUyMzRhfHJlYWQtd3JpdGU="
       }
