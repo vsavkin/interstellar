@@ -1,22 +1,26 @@
 {
-  "root": "apps/flight-simulator",
+  "name": "flight-simulator",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/flight-simulator",
   "projectType": "application",
   "targets": {
     "build": {
-      "executor": "@nrwl/next:build",
+      "executor": "@nx/next:build",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "root": "apps/flight-simulator",
         "outputPath": "dist/apps/flight-simulator",
         "buildLibsFromSource": false
       },
       "configurations": {
-        "production": {}
-      }
+        "production": {},
+        "development": {
+          "outputPath": "apps/flight-simulator"
+        }
+      },
+      "defaultConfiguration": "production"
     },
     "serve": {
-      "executor": "@nrwl/next:server",
+      "executor": "@nx/next:server",
       "options": {
         "buildTarget": "flight-simulator:build",
         "dev": true
@@ -25,25 +29,37 @@
         "production": {
           "buildTarget": "flight-simulator:build:production",
           "dev": false
+        },
+        "development": {
+          "buildTarget": "flight-simulator:build:development",
+          "dev": true
         }
+      },
+      "defaultConfiguration": "development"
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "flight-simulator:export",
+        "staticFilePath": "dist/apps/flight-simulator/exported"
       }
     },
     "export": {
-      "executor": "@nrwl/next:export",
+      "executor": "@nx/next:export",
       "options": {
         "buildTarget": "flight-simulator:build:production"
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/flight-simulator"],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/apps/flight-simulator"],
       "options": {
-        "jestConfig": "apps/flight-simulator/jest.config.js",
+        "jestConfig": "apps/flight-simulator/jest.config.ts",
         "passWithNoTests": true
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "options": {
         "lintFilePatterns": ["apps/flight-simulator/**/*.{ts,tsx,js,jsx}"]
       },

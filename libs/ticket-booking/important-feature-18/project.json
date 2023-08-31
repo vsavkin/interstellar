@@ -1,11 +1,12 @@
 {
-  "root": "libs/ticket-booking/important-feature-18",
+  "name": "ticket-booking-important-feature-18",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/ticket-booking/important-feature-18/src",
   "projectType": "library",
   "tags": [],
   "targets": {
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "options": {
         "lintFilePatterns": [
           "libs/ticket-booking/important-feature-18/**/*.{ts,tsx,js,jsx}"
@@ -14,10 +15,12 @@
       "outputs": ["{options.outputFile}"]
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/ticket-booking/important-feature-18"],
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/ticket-booking/important-feature-18"
+      ],
       "options": {
-        "jestConfig": "libs/ticket-booking/important-feature-18/jest.config.js",
+        "jestConfig": "libs/ticket-booking/important-feature-18/jest.config.ts",
         "passWithNoTests": true
       }
     }

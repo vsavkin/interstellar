@@ -1,11 +1,12 @@
 {
-  "root": "libs/warp-drive-manager/important-feature-5",
+  "name": "warp-drive-manager-important-feature-5",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/warp-drive-manager/important-feature-5/src",
   "projectType": "library",
   "tags": [],
   "targets": {
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "options": {
         "lintFilePatterns": [
           "libs/warp-drive-manager/important-feature-5/**/*.{ts,tsx,js,jsx}"
@@ -14,10 +15,12 @@
       "outputs": ["{options.outputFile}"]
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/warp-drive-manager/important-feature-5"],
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/warp-drive-manager/important-feature-5"
+      ],
       "options": {
-        "jestConfig": "libs/warp-drive-manager/important-feature-5/jest.config.js",
+        "jestConfig": "libs/warp-drive-manager/important-feature-5/jest.config.ts",
         "passWithNoTests": true
       }
     }

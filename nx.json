@@ -3,46 +3,65 @@
   "affected": {
     "defaultBase": "main"
   },
-  "implicitDependencies": {
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
-    ".eslintrc.json": "*"
-  },
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/nx-cloud",
+      "runner": "nx-cloud",
       "options": {
-        "useDaemonProcess": false,
-        "cacheableOperations": ["build", "lint", "test", "e2e"],
-        "accessToken": "ZTQ2NzFkMTgtNmI3MS00NzE2LWI5MmItNzRmMGFiMDUyMzRhfHJlYWQtd3JpdGU="
+        "cacheableOperations": ["build", "lint", "test", "e2e", "export"],
+        "accessToken": "NmNmM2ViNmUtMmNmZS00ODdiLTlhNzEtNjg1ZjE2MjFmNzgyfHJlYWQtd3JpdGU=",
+        "url": "https://staging.nx.app"
       }
     }
   },
-  "targetDependencies": {
-    "build": [
-      {
-        "target": "build",
-        "projects": "dependencies"
-      }
-    ]
-  },
-  "cli": {
-    "defaultCollection": "@nrwl/next"
-  },
   "generators": {
-    "@nrwl/react": {
+    "@nx/react": {
       "application": {
         "babel": true
       }
     },
-    "@nrwl/next": {
+    "@nx/next": {
       "application": {
         "style": "css",
         "linter": "eslint"
       }
     }
   },
-  "defaultProject": "flight-simulator"
+  "defaultProject": "flight-simulator",
+  "$schema": "./node_modules/nx/schemas/nx-schema.json",
+  "targetDefaults": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"]
+    },
+    "export": {
+      "dependsOn": ["build"],
+      "outputs": ["dist/apps/{projectName}/exported"]
+    },
+    "serve-static": {
+      "dependsOn": ["export"]
+    },
+    "lint": {
+      "inputs": ["default", "{workspaceRoot}/.eslintrc.json"]
+    },
+    "e2e": {
+      "dependsOn": ["^export"],
+      "inputs": ["default", "^production"]
+    },
+    "test": {
+      "inputs": ["default", "^production", "{workspaceRoot}/jest.preset.js"]
+    }
+  },
+  "namedInputs": {
+    "default": ["{projectRoot}/**/*", "sharedGlobals"],
+    "sharedGlobals": ["{workspaceRoot}/babel.config.json"],
+    "production": [
+      "default",
+      "!{projectRoot}/.eslintrc.json",
+      "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
+      "!{projectRoot}/tsconfig.spec.json",
+      "!{projectRoot}/jest.config.[jt]s",
+      "!{projectRoot}/src/test-setup.[jt]s"
+    ]
+  },
+  "change": 18
 }

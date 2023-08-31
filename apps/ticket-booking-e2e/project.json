@@ -1,23 +1,24 @@
 {
-  "root": "apps/ticket-booking-e2e",
+  "name": "ticket-booking-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/ticket-booking-e2e/src",
   "projectType": "application",
   "targets": {
     "e2e": {
-      "executor": "@nrwl/cypress:cypress",
+      "executor": "@nx/cypress:cypress",
       "options": {
-        "cypressConfig": "apps/ticket-booking-e2e/cypress.json",
-        "tsConfig": "apps/ticket-booking-e2e/tsconfig.e2e.json",
-        "devServerTarget": "ticket-booking:serve"
+        "cypressConfig": "apps/ticket-booking-e2e/cypress.config.ts",
+        "devServerTarget": "ticket-booking:serve:development",
+        "testingType": "e2e"
       },
       "configurations": {
         "production": {
-          "devServerTarget": "ticket-booking:serve:production"
+          "devServerTarget": "ticket-booking:serve-static"
         }
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "options": {
         "lintFilePatterns": ["apps/ticket-booking-e2e/**/*.{js,ts}"]
       },

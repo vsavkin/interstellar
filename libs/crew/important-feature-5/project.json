@@ -1,11 +1,12 @@
 {
-  "root": "libs/crew/important-feature-5",
+  "name": "crew-important-feature-5",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/crew/important-feature-5/src",
   "projectType": "library",
   "tags": [],
   "targets": {
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "options": {
         "lintFilePatterns": [
           "libs/crew/important-feature-5/**/*.{ts,tsx,js,jsx}"
@@ -14,10 +15,10 @@
       "outputs": ["{options.outputFile}"]
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/crew/important-feature-5"],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/crew/important-feature-5"],
       "options": {
-        "jestConfig": "libs/crew/important-feature-5/jest.config.js",
+        "jestConfig": "libs/crew/important-feature-5/jest.config.ts",
         "passWithNoTests": true
       }
     }

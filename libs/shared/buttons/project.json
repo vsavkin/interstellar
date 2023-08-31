@@ -1,11 +1,12 @@
 {
-  "root": "libs/shared/buttons",
+  "name": "shared-buttons",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/shared/buttons/src",
   "projectType": "library",
   "tags": [],
   "targets": {
     "build": {
-      "executor": "@nrwl/web:rollup",
+      "executor": "@nrwl/rollup:rollup",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/shared/buttons",
@@ -13,7 +14,7 @@
         "project": "libs/shared/buttons/package.json",
         "entryFile": "libs/shared/buttons/src/index.ts",
         "external": ["react/jsx-runtime"],
-        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "rollupConfig": "@nx/react/plugins/bundle-rollup",
         "assets": [
           {
             "glob": "libs/shared/buttons/README.md",
@@ -24,17 +25,17 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "options": {
         "lintFilePatterns": ["libs/shared/buttons/**/*.{ts,tsx,js,jsx}"]
       },
       "outputs": ["{options.outputFile}"]
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/shared/buttons"],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/libs/shared/buttons"],
       "options": {
-        "jestConfig": "libs/shared/buttons/jest.config.js",
+        "jestConfig": "libs/shared/buttons/jest.config.ts",
         "passWithNoTests": true
       }
     }

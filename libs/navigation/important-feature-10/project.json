@@ -1,11 +1,12 @@
 {
-  "root": "libs/navigation/important-feature-10",
+  "name": "navigation-important-feature-10",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/navigation/important-feature-10/src",
   "projectType": "library",
   "tags": [],
   "targets": {
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "options": {
         "lintFilePatterns": [
           "libs/navigation/important-feature-10/**/*.{ts,tsx,js,jsx}"
@@ -14,10 +15,12 @@
       "outputs": ["{options.outputFile}"]
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/navigation/important-feature-10"],
+      "executor": "@nx/jest:jest",
+      "outputs": [
+        "{workspaceRoot}/coverage/libs/navigation/important-feature-10"
+      ],
       "options": {
-        "jestConfig": "libs/navigation/important-feature-10/jest.config.js",
+        "jestConfig": "libs/navigation/important-feature-10/jest.config.ts",
         "passWithNoTests": true
       }
     }

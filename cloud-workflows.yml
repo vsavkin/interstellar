@@ -1,0 +1,12 @@
+env:
+  NODE_OPTIONS: '--max_old_space_size=4096'
+setup:
+  - name: Git Checkout
+    uses: 'nx-cloud-steps/checkout'
+  - name: Npm Install
+    uses: 'nx-cloud-steps/npm-install'
+steps:
+  - name: CI Checks
+    parallel-scripts: |
+      nx affected -t build e2e --parallel=1
+      nx affected -t test lint --parallel=3

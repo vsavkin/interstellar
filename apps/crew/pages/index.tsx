@@ -18,9 +18,7 @@ export function Index() {
         >
           {' '}
           If you like Nx, please give it a star:
-          <div className="github-star-badge">
-            Star
-          </div>
+          <div className="github-star-badge">Star</div>
         </a>
       </div>
       <p>Here are some links to help you get started.</p>
@@ -68,10 +66,10 @@ export function Index() {
       <details open>
         <summary>Add UI library</summary>
         <pre>{`# Generate UI lib
-nx g @nrwl/react:lib ui
+nx g @nx/react:lib ui
 
 # Add a component
-nx g @nrwl/react:component xyz --project ui`}</pre>
+nx g @nx/react:component xyz --project ui`}</pre>
       </details>
       <details>
         <summary>View dependency graph</summary>

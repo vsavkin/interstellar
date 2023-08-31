@@ -1,23 +1,24 @@
 {
-  "root": "apps/flight-simulator-e2e",
+  "name": "flight-simulator-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/flight-simulator-e2e/src",
   "projectType": "application",
   "targets": {
     "e2e": {
-      "executor": "@nrwl/cypress:cypress",
+      "executor": "@nx/cypress:cypress",
       "options": {
-        "cypressConfig": "apps/flight-simulator-e2e/cypress.json",
-        "tsConfig": "apps/flight-simulator-e2e/tsconfig.e2e.json",
-        "devServerTarget": "flight-simulator:serve"
+        "cypressConfig": "apps/flight-simulator-e2e/cypress.config.ts",
+        "devServerTarget": "flight-simulator:serve:development",
+        "testingType": "e2e"
       },
       "configurations": {
         "production": {
-          "devServerTarget": "flight-simulator:serve:production"
+          "devServerTarget": "flight-simulator:serve-static"
         }
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "options": {
         "lintFilePatterns": ["apps/flight-simulator-e2e/**/*.{js,ts}"]
       },

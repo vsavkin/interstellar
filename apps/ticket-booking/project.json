@@ -1,22 +1,26 @@
 {
-  "root": "apps/ticket-booking",
+  "name": "ticket-booking",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/ticket-booking",
   "projectType": "application",
   "targets": {
     "build": {
-      "executor": "@nrwl/next:build",
+      "executor": "@nx/next:build",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "root": "apps/ticket-booking",
         "outputPath": "dist/apps/ticket-booking",
         "buildLibsFromSource": false
       },
       "configurations": {
-        "production": {}
-      }
+        "production": {},
+        "development": {
+          "outputPath": "apps/ticket-booking"
+        }
+      },
+      "defaultConfiguration": "production"
     },
     "serve": {
-      "executor": "@nrwl/next:server",
+      "executor": "@nx/next:server",
       "options": {
         "buildTarget": "ticket-booking:build",
         "dev": true
@@ -25,25 +29,37 @@
         "production": {
           "buildTarget": "ticket-booking:build:production",
           "dev": false
+        },
+        "development": {
+          "buildTarget": "ticket-booking:build:development",
+          "dev": true
         }
+      },
+      "defaultConfiguration": "development"
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "ticket-booking:export",
+        "staticFilePath": "dist/apps/ticket-booking/exported"
       }
     },
     "export": {
-      "executor": "@nrwl/next:export",
+      "executor": "@nx/next:export",
       "options": {
         "buildTarget": "ticket-booking:build:production"
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/ticket-booking"],
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/apps/ticket-booking"],
       "options": {
-        "jestConfig": "apps/ticket-booking/jest.config.js",
+        "jestConfig": "apps/ticket-booking/jest.config.ts",
         "passWithNoTests": true
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "options": {
         "lintFilePatterns": ["apps/ticket-booking/**/*.{ts,tsx,js,jsx}"]
       },
