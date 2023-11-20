@@ -1,54 +1,22 @@
 {
-  "root": "apps/warp-drive-manager",
+  "name": "warp-drive-manager",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/warp-drive-manager",
   "projectType": "application",
   "targets": {
     "build": {
-      "executor": "@nrwl/next:build",
-      "outputs": ["{options.outputPath}"],
+      "executor": "@nx/next:build"
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
       "options": {
-        "root": "apps/warp-drive-manager",
-        "outputPath": "dist/apps/warp-drive-manager",
-        "buildLibsFromSource": false
-      },
-      "configurations": {
-        "production": {}
+        "port": 4205
       }
     },
-    "serve": {
-      "executor": "@nrwl/next:server",
-      "options": {
-        "buildTarget": "warp-drive-manager:build",
-        "dev": true
-      },
-      "configurations": {
-        "production": {
-          "buildTarget": "warp-drive-manager:build:production",
-          "dev": false
-        }
-      }
-    },
-    "export": {
-      "executor": "@nrwl/next:export",
-      "options": {
-        "buildTarget": "warp-drive-manager:build:production"
-      }
-    },
-    "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/warp-drive-manager"],
-      "options": {
-        "jestConfig": "apps/warp-drive-manager/jest.config.js",
-        "passWithNoTests": true
-      }
-    },
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "options": {
-        "lintFilePatterns": ["apps/warp-drive-manager/**/*.{ts,tsx,js,jsx}"]
-      },
-      "outputs": ["{options.outputFile}"]
-    }
+    "serve": {},
+    "export": {},
+    "test": {},
+    "lint": {}
   },
   "tags": []
 }

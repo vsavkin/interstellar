@@ -4,22 +4,8 @@
   "projectType": "library",
   "tags": [],
   "targets": {
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "libs/flight-simulator/important-feature-8/**/*.{ts,tsx,js,jsx}"
-        ]
-      },
-      "outputs": ["{options.outputFile}"]
-    },
-    "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/flight-simulator/important-feature-8"],
-      "options": {
-        "jestConfig": "libs/flight-simulator/important-feature-8/jest.config.js",
-        "passWithNoTests": true
-      }
-    }
-  }
+    "lint": {},
+    "test": {}
+  },
+  "name": "flight-simulator-important-feature-8"
 }

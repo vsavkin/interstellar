@@ -1,19 +1,24 @@
 {
-  "root": "libs/shared/alerts",
+  "name": "shared-alerts",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/shared/alerts/src",
   "projectType": "library",
   "tags": [],
   "targets": {
     "build": {
-      "executor": "@nrwl/web:rollup",
-      "outputs": ["{options.outputPath}"],
+      "executor": "@nrwl/rollup:rollup",
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/libs/shared/alerts",
         "tsConfig": "libs/shared/alerts/tsconfig.lib.json",
         "project": "libs/shared/alerts/package.json",
         "entryFile": "libs/shared/alerts/src/index.ts",
-        "external": ["react/jsx-runtime"],
-        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "external": [
+          "react/jsx-runtime"
+        ],
+        "rollupConfig": "@nx/react/plugins/bundle-rollup",
         "assets": [
           {
             "glob": "libs/shared/alerts/README.md",
@@ -23,20 +28,7 @@
         ]
       }
     },
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "options": {
-        "lintFilePatterns": ["libs/shared/alerts/**/*.{ts,tsx,js,jsx}"]
-      },
-      "outputs": ["{options.outputFile}"]
-    },
-    "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/shared/alerts"],
-      "options": {
-        "jestConfig": "libs/shared/alerts/jest.config.js",
-        "passWithNoTests": true
-      }
-    }
+    "lint": {},
+    "test": {}
   }
 }

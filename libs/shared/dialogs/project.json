@@ -1,19 +1,24 @@
 {
-  "root": "libs/shared/dialogs",
+  "name": "shared-dialogs",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/shared/dialogs/src",
   "projectType": "library",
   "tags": [],
   "targets": {
     "build": {
-      "executor": "@nrwl/web:rollup",
-      "outputs": ["{options.outputPath}"],
+      "executor": "@nrwl/rollup:rollup",
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/libs/shared/dialogs",
         "tsConfig": "libs/shared/dialogs/tsconfig.lib.json",
         "project": "libs/shared/dialogs/package.json",
         "entryFile": "libs/shared/dialogs/src/index.ts",
-        "external": ["react/jsx-runtime"],
-        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "external": [
+          "react/jsx-runtime"
+        ],
+        "rollupConfig": "@nx/react/plugins/bundle-rollup",
         "assets": [
           {
             "glob": "libs/shared/dialogs/README.md",
@@ -23,20 +28,7 @@
         ]
       }
     },
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "options": {
-        "lintFilePatterns": ["libs/shared/dialogs/**/*.{ts,tsx,js,jsx}"]
-      },
-      "outputs": ["{options.outputFile}"]
-    },
-    "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/shared/dialogs"],
-      "options": {
-        "jestConfig": "libs/shared/dialogs/jest.config.js",
-        "passWithNoTests": true
-      }
-    }
+    "lint": {},
+    "test": {}
   }
 }
