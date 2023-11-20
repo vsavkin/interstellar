@@ -1,29 +1,7 @@
 {
-  "root": "apps/navigation-e2e",
-  "sourceRoot": "apps/navigation-e2e/src",
-  "projectType": "application",
+  "name": "navigation-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "targets": {
-    "e2e": {
-      "executor": "@nrwl/cypress:cypress",
-      "options": {
-        "cypressConfig": "apps/navigation-e2e/cypress.json",
-        "tsConfig": "apps/navigation-e2e/tsconfig.e2e.json",
-        "devServerTarget": "navigation:serve"
-      },
-      "configurations": {
-        "production": {
-          "devServerTarget": "navigation:serve:production"
-        }
-      }
-    },
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "options": {
-        "lintFilePatterns": ["apps/navigation-e2e/**/*.{js,ts}"]
-      },
-      "outputs": ["{options.outputFile}"]
-    }
-  },
-  "tags": [],
-  "implicitDependencies": ["navigation"]
+    "lint": {}
+  }
 }

@@ -1,54 +1,22 @@
 {
-  "root": "apps/navigation",
+  "name": "navigation",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/navigation",
   "projectType": "application",
   "targets": {
     "build": {
-      "executor": "@nrwl/next:build",
-      "outputs": ["{options.outputPath}"],
+      "executor": "@nx/next:build"
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
       "options": {
-        "root": "apps/navigation",
-        "outputPath": "dist/apps/navigation",
-        "buildLibsFromSource": false
-      },
-      "configurations": {
-        "production": {}
+        "port": 4203
       }
     },
-    "serve": {
-      "executor": "@nrwl/next:server",
-      "options": {
-        "buildTarget": "navigation:build",
-        "dev": true
-      },
-      "configurations": {
-        "production": {
-          "buildTarget": "navigation:build:production",
-          "dev": false
-        }
-      }
-    },
-    "export": {
-      "executor": "@nrwl/next:export",
-      "options": {
-        "buildTarget": "navigation:build:production"
-      }
-    },
-    "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/navigation"],
-      "options": {
-        "jestConfig": "apps/navigation/jest.config.js",
-        "passWithNoTests": true
-      }
-    },
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "options": {
-        "lintFilePatterns": ["apps/navigation/**/*.{ts,tsx,js,jsx}"]
-      },
-      "outputs": ["{options.outputFile}"]
-    }
+    "serve": {},
+    "export": {},
+    "test": {},
+    "lint": {}
   },
   "tags": []
 }

@@ -1,3 +1,7 @@
-const nxPreset = require('@nrwl/jest/preset');
+const nxPreset = require('@nx/jest/preset');
 
-module.exports = { ...nxPreset, maxWorkers: 4 };
+module.exports = {
+  ...nxPreset,
+  maxWorkers: 4,
+  "testEnvironment": "jsdom"
+};

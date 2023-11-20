@@ -4,22 +4,8 @@
   "projectType": "library",
   "tags": [],
   "targets": {
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "libs/ticket-booking/important-feature-13/**/*.{ts,tsx,js,jsx}"
-        ]
-      },
-      "outputs": ["{options.outputFile}"]
-    },
-    "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/ticket-booking/important-feature-13"],
-      "options": {
-        "jestConfig": "libs/ticket-booking/important-feature-13/jest.config.js",
-        "passWithNoTests": true
-      }
-    }
-  }
+    "lint": {},
+    "test": {}
+  },
+  "name": "ticket-booking-important-feature-13"
 }
