@@ -19,11 +19,18 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": ["apps/flight-simulator-e2e/**/*.{js,ts}"]
+        "lintFilePatterns": [
+          "apps/flight-simulator-e2e/**/*.{js,ts}"
+        ]
       },
-      "outputs": ["{options.outputFile}"]
+      "outputs": [
+        "{options.outputFile}"
+      ]
     }
   },
   "tags": [],
-  "implicitDependencies": ["flight-simulator"]
+  "implicitDependencies": [
+    "flight-simulator"
+  ],
+  "name": "flight-simulator-e2e"
 }

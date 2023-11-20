@@ -11,15 +11,20 @@
           "libs/flight-simulator/important-feature-6/**/*.{ts,tsx,js,jsx}"
         ]
       },
-      "outputs": ["{options.outputFile}"]
+      "outputs": [
+        "{options.outputFile}"
+      ]
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/flight-simulator/important-feature-6"],
+      "outputs": [
+        "coverage/libs/flight-simulator/important-feature-6"
+      ],
       "options": {
         "jestConfig": "libs/flight-simulator/important-feature-6/jest.config.js",
         "passWithNoTests": true
       }
     }
-  }
+  },
+  "name": "flight-simulator-important-feature-6"
 }

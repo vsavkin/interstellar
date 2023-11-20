@@ -19,11 +19,18 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": ["apps/warp-drive-manager-e2e/**/*.{js,ts}"]
+        "lintFilePatterns": [
+          "apps/warp-drive-manager-e2e/**/*.{js,ts}"
+        ]
       },
-      "outputs": ["{options.outputFile}"]
+      "outputs": [
+        "{options.outputFile}"
+      ]
     }
   },
   "tags": [],
-  "implicitDependencies": ["warp-drive-manager"]
+  "implicitDependencies": [
+    "warp-drive-manager"
+  ],
+  "name": "warp-drive-manager-e2e"
 }

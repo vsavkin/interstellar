@@ -11,15 +11,20 @@
           "libs/warp-drive-manager/important-feature-13/**/*.{ts,tsx,js,jsx}"
         ]
       },
-      "outputs": ["{options.outputFile}"]
+      "outputs": [
+        "{options.outputFile}"
+      ]
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/warp-drive-manager/important-feature-13"],
+      "outputs": [
+        "coverage/libs/warp-drive-manager/important-feature-13"
+      ],
       "options": {
         "jestConfig": "libs/warp-drive-manager/important-feature-13/jest.config.js",
         "passWithNoTests": true
       }
     }
-  }
+  },
+  "name": "warp-drive-manager-important-feature-13"
 }

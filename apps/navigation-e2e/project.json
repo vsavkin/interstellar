@@ -19,11 +19,18 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": ["apps/navigation-e2e/**/*.{js,ts}"]
+        "lintFilePatterns": [
+          "apps/navigation-e2e/**/*.{js,ts}"
+        ]
       },
-      "outputs": ["{options.outputFile}"]
+      "outputs": [
+        "{options.outputFile}"
+      ]
     }
   },
   "tags": [],
-  "implicitDependencies": ["navigation"]
+  "implicitDependencies": [
+    "navigation"
+  ],
+  "name": "navigation-e2e"
 }

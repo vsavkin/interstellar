@@ -19,11 +19,18 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": ["apps/ticket-booking-e2e/**/*.{js,ts}"]
+        "lintFilePatterns": [
+          "apps/ticket-booking-e2e/**/*.{js,ts}"
+        ]
       },
-      "outputs": ["{options.outputFile}"]
+      "outputs": [
+        "{options.outputFile}"
+      ]
     }
   },
   "tags": [],
-  "implicitDependencies": ["ticket-booking"]
+  "implicitDependencies": [
+    "ticket-booking"
+  ],
+  "name": "ticket-booking-e2e"
 }

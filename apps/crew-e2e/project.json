@@ -19,11 +19,18 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": ["apps/crew-e2e/**/*.{js,ts}"]
+        "lintFilePatterns": [
+          "apps/crew-e2e/**/*.{js,ts}"
+        ]
       },
-      "outputs": ["{options.outputFile}"]
+      "outputs": [
+        "{options.outputFile}"
+      ]
     }
   },
   "tags": [],
-  "implicitDependencies": ["crew"]
+  "implicitDependencies": [
+    "crew"
+  ],
+  "name": "crew-e2e"
 }

@@ -6,13 +6,17 @@
   "targets": {
     "build": {
       "executor": "@nrwl/web:rollup",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/libs/shared/buttons",
         "tsConfig": "libs/shared/buttons/tsconfig.lib.json",
         "project": "libs/shared/buttons/package.json",
         "entryFile": "libs/shared/buttons/src/index.ts",
-        "external": ["react/jsx-runtime"],
+        "external": [
+          "react/jsx-runtime"
+        ],
         "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
         "assets": [
           {
@@ -26,17 +30,24 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": ["libs/shared/buttons/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": [
+          "libs/shared/buttons/**/*.{ts,tsx,js,jsx}"
+        ]
       },
-      "outputs": ["{options.outputFile}"]
+      "outputs": [
+        "{options.outputFile}"
+      ]
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/shared/buttons"],
+      "outputs": [
+        "coverage/libs/shared/buttons"
+      ],
       "options": {
         "jestConfig": "libs/shared/buttons/jest.config.js",
         "passWithNoTests": true
       }
     }
-  }
+  },
+  "name": "shared-buttons"
 }

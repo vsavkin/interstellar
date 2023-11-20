@@ -11,15 +11,20 @@
           "libs/navigation/important-feature-8/**/*.{ts,tsx,js,jsx}"
         ]
       },
-      "outputs": ["{options.outputFile}"]
+      "outputs": [
+        "{options.outputFile}"
+      ]
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/navigation/important-feature-8"],
+      "outputs": [
+        "coverage/libs/navigation/important-feature-8"
+      ],
       "options": {
         "jestConfig": "libs/navigation/important-feature-8/jest.config.js",
         "passWithNoTests": true
       }
     }
-  }
+  },
+  "name": "navigation-important-feature-8"
 }

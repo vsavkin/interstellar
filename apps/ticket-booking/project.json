@@ -5,7 +5,9 @@
   "targets": {
     "build": {
       "executor": "@nrwl/next:build",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "root": "apps/ticket-booking",
         "outputPath": "dist/apps/ticket-booking",
@@ -36,7 +38,9 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/ticket-booking"],
+      "outputs": [
+        "coverage/apps/ticket-booking"
+      ],
       "options": {
         "jestConfig": "apps/ticket-booking/jest.config.js",
         "passWithNoTests": true
@@ -45,10 +49,15 @@
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": ["apps/ticket-booking/**/*.{ts,tsx,js,jsx}"]
+        "lintFilePatterns": [
+          "apps/ticket-booking/**/*.{ts,tsx,js,jsx}"
+        ]
       },
-      "outputs": ["{options.outputFile}"]
+      "outputs": [
+        "{options.outputFile}"
+      ]
     }
   },
-  "tags": []
+  "tags": [],
+  "name": "ticket-booking"
 }

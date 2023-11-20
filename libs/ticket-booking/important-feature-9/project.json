@@ -11,15 +11,20 @@
           "libs/ticket-booking/important-feature-9/**/*.{ts,tsx,js,jsx}"
         ]
       },
-      "outputs": ["{options.outputFile}"]
+      "outputs": [
+        "{options.outputFile}"
+      ]
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/ticket-booking/important-feature-9"],
+      "outputs": [
+        "coverage/libs/ticket-booking/important-feature-9"
+      ],
       "options": {
         "jestConfig": "libs/ticket-booking/important-feature-9/jest.config.js",
         "passWithNoTests": true
       }
     }
-  }
+  },
+  "name": "ticket-booking-important-feature-9"
 }

@@ -11,15 +11,20 @@
           "libs/navigation/important-feature-6/**/*.{ts,tsx,js,jsx}"
         ]
       },
-      "outputs": ["{options.outputFile}"]
+      "outputs": [
+        "{options.outputFile}"
+      ]
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/navigation/important-feature-6"],
+      "outputs": [
+        "coverage/libs/navigation/important-feature-6"
+      ],
       "options": {
         "jestConfig": "libs/navigation/important-feature-6/jest.config.js",
         "passWithNoTests": true
       }
     }
-  }
+  },
+  "name": "navigation-important-feature-6"
 }

@@ -11,15 +11,20 @@
           "libs/crew/important-feature-12/**/*.{ts,tsx,js,jsx}"
         ]
       },
-      "outputs": ["{options.outputFile}"]
+      "outputs": [
+        "{options.outputFile}"
+      ]
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/crew/important-feature-12"],
+      "outputs": [
+        "coverage/libs/crew/important-feature-12"
+      ],
       "options": {
         "jestConfig": "libs/crew/important-feature-12/jest.config.js",
         "passWithNoTests": true
       }
     }
-  }
+  },
+  "name": "crew-important-feature-12"
 }
