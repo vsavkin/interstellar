@@ -1,5 +1,3 @@
-import styles from './index.module.css';
-
 export function Index() {
   /*
    * Replace the elements below with your own.
@@ -7,7 +5,7 @@ export function Index() {
    * Note: The corresponding styles are in the ./index.css file.
    */
   return (
-    <div className={styles.page}>
+    <div>
       <h2>Resources &amp; Tools</h2>
       <p>Thank you for using and showing some ♥ for Nx.</p>
       <div className="flex github-star-container">
@@ -18,9 +16,7 @@ export function Index() {
         >
           {' '}
           If you like Nx, please give it a star:
-          <div className="github-star-badge">
-            Star
-          </div>
+          <div className="github-star-badge">Star</div>
         </a>
       </div>
       <p>Here are some links to help you get started.</p>
@@ -68,10 +64,10 @@ export function Index() {
       <details open>
         <summary>Add UI library</summary>
         <pre>{`# Generate UI lib
-nx g @nrwl/react:lib ui
+nx g @nx/react:lib ui
 
 # Add a component
-nx g @nrwl/react:component xyz --project ui`}</pre>
+nx g @nx/react:component xyz --project ui`}</pre>
       </details>
       <details>
         <summary>View dependency graph</summary>

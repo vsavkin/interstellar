@@ -4,22 +4,8 @@
   "projectType": "library",
   "tags": [],
   "targets": {
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "libs/crew/important-feature-9/**/*.{ts,tsx,js,jsx}"
-        ]
-      },
-      "outputs": ["{options.outputFile}"]
-    },
-    "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/crew/important-feature-9"],
-      "options": {
-        "jestConfig": "libs/crew/important-feature-9/jest.config.js",
-        "passWithNoTests": true
-      }
-    }
-  }
+    "lint": {},
+    "test": {}
+  },
+  "name": "crew-important-feature-9"
 }
