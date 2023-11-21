@@ -23,7 +23,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '20'
-      - run: npm install
+      - run: npm install --force
       - name: Run verification
         run: 'npx nx affected -t export test lint e2e --parallel 1'
       - name: Tag main branch if all jobs succeed
@@ -40,6 +40,6 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '20'
-      - run: npm install
+      - run: npm install ---force
       - name: Run verification
         run: 'npx nx affected -t export test lint e2e --parallel 1'
