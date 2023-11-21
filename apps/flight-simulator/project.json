@@ -6,9 +6,7 @@
   "targets": {
     "build": {
       "executor": "@nx/next:build",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/flight-simulator",
         "buildLibsFromSource": false
@@ -38,7 +36,19 @@
     },
     "test": {},
     "lint": {},
-    "e2e": {}
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/flight-simulator/cypress.config.ts",
+        "testingType": "e2e",
+        "devServerTarget": "flight-simulator:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "flight-simulator:serve:production"
+        }
+      }
+    }
   },
   "tags": []
 }

@@ -1,5 +1,6 @@
 {
   "extends": [
+    "plugin:cypress/recommended",
     "plugin:@nx/react-typescript",
     "../../.eslintrc.json",
     "next",
@@ -22,6 +23,10 @@
     },
     {
       "files": ["*.js", "*.jsx"],
+      "rules": {}
+    },
+    {
+      "files": ["*.cy.{ts,js,tsx,jsx}", "cypress/**/*.{ts,js,tsx,jsx}"],
       "rules": {}
     }
   ],

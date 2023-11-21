@@ -6,9 +6,7 @@
   "targets": {
     "build": {
       "executor": "@nx/next:build",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/navigation",
         "buildLibsFromSource": false
@@ -38,7 +36,14 @@
     },
     "test": {},
     "lint": {},
-    "e2e": {}
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/navigation/cypress.config.ts",
+        "testingType": "e2e",
+        "devServerTarget": "navigation:server"
+      }
+    }
   },
   "tags": []
 }

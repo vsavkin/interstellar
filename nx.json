@@ -33,7 +33,7 @@
     },
     "e2e": {
       "cache": true,
-      "inputs": ["default", "^production"],
+      "inputs": ["default", "^production"]
     },
     "test": {
       "cache": true,

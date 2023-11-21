@@ -6,9 +6,7 @@
   "targets": {
     "build": {
       "executor": "@nx/next:build",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/crew",
         "buildLibsFromSource": false
@@ -38,7 +36,19 @@
     },
     "test": {},
     "lint": {},
-    "e2e": {}
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/crew/cypress.config.ts",
+        "testingType": "e2e",
+        "devServerTarget": "crew:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "crew:serve:production"
+        }
+      }
+    }
   },
   "tags": []
 }
