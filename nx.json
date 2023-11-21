@@ -34,11 +34,6 @@
     "e2e": {
       "cache": true,
       "inputs": ["default", "^production"],
-      "executor": "@nx/cypress:cypress",
-      "options": {
-        "cypressConfig": "{projectRoot}/cypress.json",
-        "devServerTarget": "{projectName}}:serve"
-      }
     },
     "test": {
       "cache": true,

@@ -4,7 +4,14 @@
   "sourceRoot": "apps/crew-e2e/src",
   "projectType": "application",
   "targets": {
-    "e2e": {},
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/crew-e2e/cypress.config.ts",
+        "testingType": "e2e",
+        "devServerTarget": "crew:serve"
+      }
+    },
     "lint": {},
     "test": {}
   },
