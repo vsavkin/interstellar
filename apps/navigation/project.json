@@ -5,47 +5,18 @@
   "projectType": "application",
   "targets": {
     "build": {
-      "executor": "@nx/next:build",
-      "outputs": [
-        "{options.outputPath}"
-      ],
-      "options": {
-        "outputPath": "dist/apps/navigation",
-        "buildLibsFromSource": false
-      },
-      "configurations": {
-        "production": {}
-      }
-    },
-    "serve": {
-      "executor": "@nx/next:server",
-      "options": {
-        "buildTarget": "navigation:build",
-        "dev": true,
-      },
-      "configurations": {
-        "production": {
-          "buildTarget": "navigation:build:production",
-          "dev": false
-        }
-      }
+      "executor": "@nx/next:build"
     },
     "serve-static": {
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "navigation:export",
-        "staticFilePath": "dist/{projectRoot}/exported",
         "port": 4203
       }
     },
-    "export": {
-      "executor": "@nx/next:export",
-      "options": {
-        "buildTarget": "navigation:build:production"
-      }
-    },
+    "serve": {},
+    "export": {},
     "test": {},
-    "lint": {},
+    "lint": {}
   },
   "tags": []
 }

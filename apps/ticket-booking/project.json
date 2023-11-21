@@ -5,45 +5,16 @@
   "projectType": "application",
   "targets": {
     "build": {
-      "executor": "@nx/next:build",
-      "outputs": [
-        "{options.outputPath}"
-      ],
-      "options": {
-        "outputPath": "dist/apps/ticket-booking",
-        "buildLibsFromSource": false
-      },
-      "configurations": {
-        "production": {}
-      }
-    },
-    "serve": {
-      "executor": "@nx/next:server",
-      "options": {
-        "buildTarget": "ticket-booking:build",
-        "dev": true
-      },
-      "configurations": {
-        "production": {
-          "buildTarget": "ticket-booking:build:production",
-          "dev": false
-        }
-      }
+      "executor": "@nx/next:build"
     },
     "serve-static": {
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "ticket-booking:export",
-        "staticFilePath": "dist/{projectRoot}/exported",
         "port": 4204
       }
     },
-    "export": {
-      "executor": "@nx/next:export",
-      "options": {
-        "buildTarget": "ticket-booking:build:production"
-      }
-    },
+    "serve": {},
+    "export": {},
     "test": {},
     "lint": {}
   },

@@ -21,6 +21,44 @@
     ]
   },
   "targetDefaults": {
+    "@nx/next:build": {
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/apps/{projectName}",
+        "buildLibsFromSource": false
+      },
+      "configurations": {
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nx/next:server",
+      "options": {
+        "buildTarget": "{projectName}:build",
+        "dev": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "{projectName}:build:production",
+          "dev": false
+        }
+      }
+    },
+    "export": {
+      "executor": "@nx/next:export",
+      "options": {
+        "buildTarget": "{projectName}:build:production"
+      }
+    },
+    "serve-static": {
+      "dependsOn": ["export"],
+      "options": {
+        "watch": false,
+        "staticFilePath": "dist/{projectRoot}/exported"
+      }
+    },
     "build": {
       "dependsOn": [
         "^build"
@@ -44,13 +82,6 @@
         ]
       }
     },
-    "e2e": {
-      "cache": true,
-      "inputs": [
-        "default",
-        "^production"
-      ]
-    },
     "test": {
       "cache": true,
       "inputs": [
@@ -65,5 +96,6 @@
       }
     }
   },
+  "plugins": ["@nx/cypress/plugin"],
   "nxCloudAccessToken": "ZTQ2NzFkMTgtNmI3MS00NzE2LWI5MmItNzRmMGFiMDUyMzRhfHJlYWQtd3JpdGU="
 }
