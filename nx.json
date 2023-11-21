@@ -96,6 +96,5 @@
       }
     }
   },
-  "plugins": ["@nx/cypress/plugin"],
-  "nxCloudAccessToken": "ZTQ2NzFkMTgtNmI3MS00NzE2LWI5MmItNzRmMGFiMDUyMzRhfHJlYWQtd3JpdGU="
+  "plugins": ["@nx/cypress/plugin"]
 }
