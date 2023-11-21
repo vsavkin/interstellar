@@ -12,6 +12,7 @@ env:
 jobs:
   main:
     runs-on: ubuntu-latest
+    timeout-minutes: 240
     if: ${{ github.event_name != 'pull_request' }}
     steps:
       - uses: actions/checkout@v2
@@ -31,6 +32,7 @@ jobs:
 
   pr:
     runs-on: ubuntu-latest
+    timeout-minutes: 240
     if: ${{ github.event_name == 'pull_request' }}
     steps:
       - uses: actions/checkout@v2
