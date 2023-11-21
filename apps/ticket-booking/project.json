@@ -6,7 +6,9 @@
   "targets": {
     "build": {
       "executor": "@nx/next:build",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/ticket-booking",
         "buildLibsFromSource": false
@@ -28,6 +30,14 @@
         }
       }
     },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "ticket-booking:export",
+        "staticFilePath": "dist/{projectRoot}/exported",
+        "port": 4204
+      }
+    },
     "export": {
       "executor": "@nx/next:export",
       "options": {
@@ -35,20 +45,7 @@
       }
     },
     "test": {},
-    "lint": {},
-    "e2e": {
-      "executor": "@nx/cypress:cypress",
-      "options": {
-        "cypressConfig": "apps/ticket-booking/cypress.config.ts",
-        "testingType": "e2e",
-        "devServerTarget": "ticket-booking:serve"
-      },
-      "configurations": {
-        "production": {
-          "devServerTarget": "ticket-booking:serve:production"
-        }
-      }
-    }
+    "lint": {}
   },
   "tags": []
 }

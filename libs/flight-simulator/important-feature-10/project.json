@@ -5,8 +5,7 @@
   "tags": [],
   "targets": {
     "lint": {},
-    "test": {},
-    "e2e": {}
+    "test": {}
   },
   "name": "flight-simulator-important-feature-10"
 }

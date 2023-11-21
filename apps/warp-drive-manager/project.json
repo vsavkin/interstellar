@@ -6,7 +6,9 @@
   "targets": {
     "build": {
       "executor": "@nx/next:build",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/warp-drive-manager",
         "buildLibsFromSource": false
@@ -28,6 +30,14 @@
         }
       }
     },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "warp-drive-manager:export",
+        "staticFilePath": "dist/{projectRoot}/exported",
+        "port": 4205
+      }
+    },
     "export": {
       "executor": "@nx/next:export",
       "options": {
@@ -35,20 +45,7 @@
       }
     },
     "test": {},
-    "lint": {},
-    "e2e": {
-      "executor": "@nx/cypress:cypress",
-      "options": {
-        "cypressConfig": "apps/warp-drive-manager/cypress.config.ts",
-        "testingType": "e2e",
-        "devServerTarget": "warp-drive-manager:serve"
-      },
-      "configurations": {
-        "production": {
-          "devServerTarget": "warp-drive-manager:serve:production"
-        }
-      }
-    }
+    "lint": {}
   },
   "tags": []
 }

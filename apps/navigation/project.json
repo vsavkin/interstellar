@@ -6,7 +6,9 @@
   "targets": {
     "build": {
       "executor": "@nx/next:build",
-      "outputs": ["{options.outputPath}"],
+      "outputs": [
+        "{options.outputPath}"
+      ],
       "options": {
         "outputPath": "dist/apps/navigation",
         "buildLibsFromSource": false
@@ -19,13 +21,21 @@
       "executor": "@nx/next:server",
       "options": {
         "buildTarget": "navigation:build",
-        "dev": true
+        "dev": true,
       },
       "configurations": {
         "production": {
           "buildTarget": "navigation:build:production",
           "dev": false
         }
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "navigation:export",
+        "staticFilePath": "dist/{projectRoot}/exported",
+        "port": 4203
       }
     },
     "export": {
@@ -36,14 +46,6 @@
     },
     "test": {},
     "lint": {},
-    "e2e": {
-      "executor": "@nx/cypress:cypress",
-      "options": {
-        "cypressConfig": "apps/navigation/cypress.config.ts",
-        "testingType": "e2e",
-        "devServerTarget": "navigation:server"
-      }
-    }
   },
   "tags": []
 }
