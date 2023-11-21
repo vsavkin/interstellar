@@ -1,0 +1,23 @@
+{
+  "name": "crew-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "targets": {
+    "e2e": {
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/crew-e2e/cypress.config.ts",
+        "testingType": "e2e",
+        "devServerTarget": "crew:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "crew:serve:production"
+        },
+        "ci": {
+          "devServerTarget": "crew:serve-static"
+        }
+      }
+    },
+    "lint": {}
+  }
+}
