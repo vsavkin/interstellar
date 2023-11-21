@@ -4,27 +4,9 @@
   "projectType": "library",
   "tags": [],
   "targets": {
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "libs/warp-drive-manager/important-feature-17/**/*.{ts,tsx,js,jsx}"
-        ]
-      },
-      "outputs": [
-        "{options.outputFile}"
-      ]
-    },
-    "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "coverage/libs/warp-drive-manager/important-feature-17"
-      ],
-      "options": {
-        "jestConfig": "libs/warp-drive-manager/important-feature-17/jest.config.js",
-        "passWithNoTests": true
-      }
-    }
+    "lint": {},
+    "test": {},
+    "e2e": {}
   },
   "name": "warp-drive-manager-important-feature-17"
 }

@@ -4,27 +4,9 @@
   "projectType": "library",
   "tags": [],
   "targets": {
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "libs/navigation/important-feature-18/**/*.{ts,tsx,js,jsx}"
-        ]
-      },
-      "outputs": [
-        "{options.outputFile}"
-      ]
-    },
-    "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "coverage/libs/navigation/important-feature-18"
-      ],
-      "options": {
-        "jestConfig": "libs/navigation/important-feature-18/jest.config.js",
-        "passWithNoTests": true
-      }
-    }
+    "lint": {},
+    "test": {},
+    "e2e": {}
   },
   "name": "navigation-important-feature-18"
 }

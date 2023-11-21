@@ -1,48 +1,54 @@
 {
-  "npmScope": "interstellar",
   "affected": {
     "defaultBase": "main"
   },
-  "implicitDependencies": {
-    "package.json": {
-      "dependencies": "*",
-      "devDependencies": "*"
-    },
-    ".eslintrc.json": "*"
-  },
-  "tasksRunnerOptions": {
-    "default": {
-      "runner": "@nrwl/nx-cloud",
-      "options": {
-        "useDaemonProcess": false,
-        "cacheableOperations": ["build", "lint", "test", "e2e"],
-        "accessToken": "ZTQ2NzFkMTgtNmI3MS00NzE2LWI5MmItNzRmMGFiMDUyMzRhfHJlYWQtd3JpdGU="
-      }
-    }
-  },
-  "targetDependencies": {
-    "build": [
-      {
-        "target": "build",
-        "projects": "dependencies"
-      }
+  "defaultProject": "flight-simulator",
+  "namedInputs": {
+    "default": ["{projectRoot}/**/*", "sharedGlobals"],
+    "sharedGlobals": ["{workspaceRoot}/babel.config.json"],
+    "production": [
+      "default",
+      "!{projectRoot}/.eslintrc.json",
+      "!{projectRoot}/**/?(*.)+(spec|test).[jt]s?(x)?(.snap)",
+      "!{projectRoot}/tsconfig.spec.json",
+      "!{projectRoot}/jest.config.[jt]s",
+      "!{projectRoot}/src/test-setup.[jt]s"
     ]
   },
-  "cli": {
-    "defaultCollection": "@nrwl/next"
-  },
-  "generators": {
-    "@nrwl/react": {
-      "application": {
-        "babel": true
+  "targetDefaults": {
+    "build": {
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"],
+      "cache": true
+    },
+    "lint": {
+      "cache": true,
+      "inputs": ["default", "{workspaceRoot}/.eslintrc.json"],
+      "executor": "@nx/eslint:lint",
+      "options": {
+        "lintFilePatterns": [
+          "{projectRoot}/**/*.{ts,tsx,js,jsx}"
+        ]
       }
     },
-    "@nrwl/next": {
-      "application": {
-        "style": "css",
-        "linter": "eslint"
+    "e2e": {
+      "cache": true,
+      "inputs": ["default", "^production"],
+      "executor": "@nx/cypress:cypress",
+      "options": {
+        "cypressConfig": "{projectRoot}/cypress.json",
+        "devServerTarget": "{projectName}}:serve"
+      }
+    },
+    "test": {
+      "cache": true,
+      "inputs": ["default", "^production", "{workspaceRoot}/jest.preset.js"],
+      "executor": "@nx/jest:jest",
+      "options": {
+        "jestConfig": "{projectRoot}/jest.config.js",
+        "passWithNoTests": true
       }
     }
   },
-  "defaultProject": "flight-simulator"
+  "nxCloudAccessToken": "ZTQ2NzFkMTgtNmI3MS00NzE2LWI5MmItNzRmMGFiMDUyMzRhfHJlYWQtd3JpdGU="
 }

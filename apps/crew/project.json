@@ -1,15 +1,15 @@
 {
-  "root": "apps/crew",
+  "name": "crew",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/crew",
   "projectType": "application",
   "targets": {
     "build": {
-      "executor": "@nrwl/next:build",
+      "executor": "@nx/next:build",
       "outputs": [
         "{options.outputPath}"
       ],
       "options": {
-        "root": "apps/crew",
         "outputPath": "dist/apps/crew",
         "buildLibsFromSource": false
       },
@@ -18,7 +18,7 @@
       }
     },
     "serve": {
-      "executor": "@nrwl/next:server",
+      "executor": "@nx/next:server",
       "options": {
         "buildTarget": "crew:build",
         "dev": true
@@ -31,33 +31,14 @@
       }
     },
     "export": {
-      "executor": "@nrwl/next:export",
+      "executor": "@nx/next:export",
       "options": {
         "buildTarget": "crew:build:production"
       }
     },
-    "test": {
-      "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "coverage/apps/crew"
-      ],
-      "options": {
-        "jestConfig": "apps/crew/jest.config.js",
-        "passWithNoTests": true
-      }
-    },
-    "lint": {
-      "executor": "@nrwl/linter:eslint",
-      "options": {
-        "lintFilePatterns": [
-          "apps/crew/**/*.{ts,tsx,js,jsx}"
-        ]
-      },
-      "outputs": [
-        "{options.outputFile}"
-      ]
-    }
+    "test": {},
+    "lint": {},
+    "e2e": {}
   },
-  "tags": [],
-  "name": "crew"
+  "tags": []
 }
