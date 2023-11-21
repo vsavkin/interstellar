@@ -7,7 +7,7 @@ describe('crew-e2e', () => {
     // Custom command example, see `../support/commands.ts` file
     cy.login('my-email@something.com', 'myPassword');
 
-    cy.wait(10000); // simulate slow test
+    cy.wait(20000); // simulate slow test
 
     // Function helper example, see `../support/app.po.ts` file
     getGreeting().contains(/Welcome/);
@@ -17,7 +17,7 @@ describe('crew-e2e', () => {
     // Custom command example, see `../support/commands.ts` file
     cy.login('my-email@something.com', 'myPassword');
 
-    cy.wait(10000); // simulate slow test
+    cy.wait(20000); // simulate slow test
 
     // Function helper example, see `../support/app.po.ts` file
     getGreeting().contains(/Welcome/);
@@ -27,7 +27,7 @@ describe('crew-e2e', () => {
     // Custom command example, see `../support/commands.ts` file
     cy.login('my-email@something.com', 'myPassword');
 
-    cy.wait(10000); // simulate slow test
+    cy.wait(20000); // simulate slow test
 
     // Function helper example, see `../support/app.po.ts` file
     getGreeting().contains(/Welcome/);

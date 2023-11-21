@@ -3,7 +3,7 @@ name: ManagedAgentsDemo
 on:
   push:
     branches:
-      - main
+        - main
   pull_request:
 
 env:
@@ -24,9 +24,9 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '20'
-      - run: npm install --force
+      - run: yarn install
       - name: Run verification
-        run: 'npx nx affected -t export test lint e2e --parallel 1'
+        run: 'npx nx affected -t export test lint e2e --parallel 1 --no-dte'
       - name: Tag main branch if all jobs succeed
         uses: nrwl/nx-tag-successful-ci-run@v1
 
@@ -42,6 +42,8 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '20'
-      - run: npm install ---force
+      - name: Start CI run
+        run: 'npx nx-cloud start-ci-run --distributes-on="15 linux-medium-js"'
+      - run: yarn install
       - name: Run verification
-        run: 'npx nx affected -t export test lint e2e --parallel 1'
+        run: 'npx nx affected -t export test lint e2e-ci --parallel 1'

@@ -1,16 +1,10 @@
 {
   "affected": {
-    "defaultBase": "main"
+    "defaultBase": "origin/main"
   },
-  "defaultProject": "flight-simulator",
   "namedInputs": {
-    "default": [
-      "{projectRoot}/**/*",
-      "sharedGlobals"
-    ],
-    "sharedGlobals": [
-      "{workspaceRoot}/babel.config.json"
-    ],
+    "default": ["{projectRoot}/**/*", "sharedGlobals"],
+    "sharedGlobals": ["{workspaceRoot}/babel.config.json"],
     "production": [
       "default",
       "!{projectRoot}/.eslintrc.json",
@@ -22,9 +16,9 @@
   },
   "targetDefaults": {
     "@nx/next:build": {
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "cache": true,
+      "inputs": ["production", "^production"],
+      "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/{projectName}",
         "buildLibsFromSource": false
@@ -48,6 +42,9 @@
     },
     "export": {
       "executor": "@nx/next:export",
+      "cache": true,
+      "inputs": ["production", "^production"],
+      "outputs": ["{workspaceRoot}/dist/{projectRoot}/exported"],
       "options": {
         "buildTarget": "{projectName}:build:production"
       }
@@ -60,35 +57,21 @@
       }
     },
     "build": {
-      "dependsOn": [
-        "^build"
-      ],
-      "inputs": [
-        "production",
-        "^production"
-      ],
+      "dependsOn": ["^build"],
+      "inputs": ["production", "^production"],
       "cache": true
     },
     "lint": {
       "cache": true,
-      "inputs": [
-        "default",
-        "{workspaceRoot}/.eslintrc.json"
-      ],
+      "inputs": ["default", "{workspaceRoot}/.eslintrc.json"],
       "executor": "@nx/eslint:lint",
       "options": {
-        "lintFilePatterns": [
-          "{projectRoot}/**/*.{ts,tsx,js,jsx}"
-        ]
+        "lintFilePatterns": ["{projectRoot}/**/*.{ts,tsx,js,jsx}"]
       }
     },
     "test": {
       "cache": true,
-      "inputs": [
-        "default",
-        "^production",
-        "{workspaceRoot}/jest.preset.js"
-      ],
+      "inputs": ["default", "^production", "{workspaceRoot}/jest.preset.js"],
       "executor": "@nx/jest:jest",
       "options": {
         "jestConfig": "{projectRoot}/jest.config.js",
@@ -96,5 +79,7 @@
       }
     }
   },
-  "plugins": ["@nx/cypress/plugin"]
+  "plugins": ["@nx/cypress/plugin"],
+  "nxCloudAccessToken": "NTY1ZDkzMTEtNTI3Ny00MWJhLTgwMTQtMDhiNGQxZWRkOThifHJlYWQtd3JpdGU=",
+  "nxCloudUrl": "https://staging.nx.app"
 }
