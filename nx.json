@@ -3,8 +3,8 @@
     "defaultBase": "origin/main"
   },
   "namedInputs": {
-    "default": ["{projectRoot}/**/*", "sharedGlobals"],
     "sharedGlobals": ["{workspaceRoot}/babel.config.json"],
+    "default": ["sharedGlobals", "{projectRoot}/**/*"],
     "production": [
       "default",
       "!{projectRoot}/.eslintrc.json",
