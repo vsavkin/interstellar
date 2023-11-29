@@ -6,7 +6,7 @@ export interface Button0Props {}
 export function Button0(props: Button0Props) {
   return (
     <div>
-      <h1>Welcome to Button0!</h1>
+      <h2>Welcome to Button0!</h2>
     </div>
   );
 }
