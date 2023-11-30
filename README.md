@@ -1,10 +1,14 @@
-# Nx Managed Agents Demo
+# Nx Agents Demo
 #### On how to make your CI 10 times faster with a single line change
 
 This repo shows how using Nx Managed Agents you can distribute your CI reducing its time from hours to minutes.
 
 ## Video
-[![IMAGE ALT TEXT](http://img.youtube.com/vi/w1CLYG8UN3Q/0.jpg)](https://youtu.be/w1CLYG8UN3QE "Nx Managed Agents Demo")
+<br>
+<a href="https://youtu.be/KPCMg_Dn0EoE">
+<img src="readme-resources/video-thumbnail.png" alt='video' width="600">
+</a>
+<br>
 
 ## Repository
 
@@ -32,7 +36,7 @@ The job takes 87 minutes.
 To enable distribution we need to make sure our repo is connected to Nx Cloud (which we can do by running `nx connect`). After that we need to add the following line to our CI config:
 
 ```
-npx nx-cloud start-ci-run --distributes-on="15 linux-large-js" --stop-agents-after="e2e-ci"
+npx nx-cloud start-ci-run --distributes-on="15 linux-medium-plus-js" --stop-agents-after="e2e-ci"
 ```
 
 This informs Nx that we can distribute commands using 15 linux VMs.
@@ -43,7 +47,7 @@ Some Nx plugins (e.g., Cypress and Playwright) can automatically split expensive
 
 We enable that we need to change `npx nx affected -t e2e --parallel 1` to `npx nx affected -t e2e-ci --parallel 1`.
 
-The updated job takes 12 minutes.
+The updated job takes 9 minutes.
 
 <br>
 <img src="readme-resources/cipe.png" alt='diagram showing cipe' width="600">
