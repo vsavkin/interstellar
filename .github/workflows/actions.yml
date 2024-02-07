@@ -42,8 +42,6 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '20'
-      - name: Start CI run
-        run: 'npx nx-cloud start-ci-run --distributes-on="15 linux-medium-plus-js" --stop-agents-after="e2e-ci"'
       - run: yarn install --frozen-lockfile
       - name: Run verification
         run: 'npx nx affected -t export test lint --parallel 1 && npx nx affected -t e2e-ci --parallel 1'
