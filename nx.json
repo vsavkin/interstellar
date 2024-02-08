@@ -40,15 +40,6 @@
         }
       }
     },
-    "export": {
-      "executor": "@nx/next:export",
-      "cache": true,
-      "inputs": ["production", "^production"],
-      "outputs": ["{workspaceRoot}/dist/{projectRoot}/exported"],
-      "options": {
-        "buildTarget": "{projectName}:build:production"
-      }
-    },
     "serve-static": {
       "dependsOn": ["export"],
       "options": {
