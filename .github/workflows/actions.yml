@@ -3,7 +3,7 @@ name: ManagedAgentsDemo
 on:
   push:
     branches:
-        - main
+      - main
   pull_request:
 
 env:
@@ -26,7 +26,7 @@ jobs:
           node-version: '20'
       - run: yarn install --frozen-lockfile
       - name: Run verification
-        run: 'npx nx affected -t export test lint --parallel 1 --no-cloud && npx nx affected -t e2e-ci --parallel 1 --no-cloud'
+        run: 'npx nx affected -t build test lint --parallel 1 --no-cloud && npx nx affected -t e2e --parallel 1 --no-cloud'
       - name: Tag main branch if all jobs succeed
         uses: nrwl/nx-tag-successful-ci-run@v1
 
@@ -44,4 +44,4 @@ jobs:
           node-version: '20'
       - run: yarn install --frozen-lockfile
       - name: Run verification
-        run: 'npx nx affected -t export test lint --parallel 1 && npx nx affected -t e2e-ci --parallel 1'
+        run: 'npx nx affected -t export test lint --parallel 1 && npx nx affected -t e2e --parallel 1'
