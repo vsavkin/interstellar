@@ -6,7 +6,7 @@
   },
   "namedInputs": {
     "default": ["sharedGlobals", "{projectRoot}/**/*"],
-    "sharedGlobals": ["{workspaceRoot}/babel.config.json"],
+    "sharedGlobals": ["{workspaceRoot}/babel.config.json","{workspaceRoot}/README.md"],
     "production": [
       "default",
       "!{projectRoot}/.eslintrc.json",
@@ -71,7 +71,8 @@
       "executor": "@nx/jest:jest",
       "options": {
         "jestConfig": "{projectRoot}/jest.config.js",
-        "passWithNoTests": true
+        "passWithNoTests": true,
+        "runInBand": true
       }
     }
   },

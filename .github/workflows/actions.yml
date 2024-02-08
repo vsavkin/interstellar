@@ -47,52 +47,11 @@ jobs:
       - name: Check out the default branch
         run: git branch --track main origin/main
 
-      - name: Initialize the Nx Cloud distributed CI run and stop agents when the build tasks are done
-        run: yarn nx-cloud start-ci-run --stop-agents-after=build
+      - name: Initialize the Nx Cloud distributed CI run and stop agents when the e2e tasks are done
+        run: yarn nx-cloud start-ci-run --distribute-on="3 linux-large-custom" --stop-agents-after="e2e"
 
       - name: Run commands in parallel
-        run: |
-          pids=()
+        run: yarn nx run-many -t build,test,lint --parallel=3
 
-          # list of commands to be run on agents
-          yarn nx run-many -t build,test,lint,e2e --parallel=3 &
-          yarn nx run-many -t e2e --parallel=1 &
-          pids+=($!)
-
-          # run all commands in parallel and bail if one of them fails
-          for pid in ${pids[*]}; do
-            if ! wait $pid; then
-              exit 1
-            fi
-          done
-
-          exit 0
-
-  agents:
-    name: Agent ${{ matrix.agent }}
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        # Add more agents here as your repository expands
-        agent: [1, 2, 3]
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      # Set node/npm/yarn versions using volta
-      - uses: volta-cli/action@v4
-        with:
-          package-json-path: '${{ github.workspace }}/package.json'
-
-      - name: Use the package manager cache if available
-        uses: actions/setup-node@v3
-        with:
-          node-version: 20
-
-      - name: yarn
-        run: yarn install --frozen-lockfile
-
-      - name: Start Nx Agent ${{ matrix.agent }}
-        run: yarn nx-cloud start-agent
-        env:
-          NX_AGENT_NAME: ${{ matrix.agent }}
+      - name: Run e2e serially
+        run: yarn nx run-many -t e2e --parallel=1
