@@ -17,6 +17,9 @@
     ]
   },
   "targetDefaults": {
+    "e2e": {
+      "cache": true
+    },
     "@nx/next:build": {
       "cache": true,
       "inputs": ["production", "^production"],
