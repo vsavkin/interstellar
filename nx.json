@@ -71,7 +71,8 @@
       "executor": "@nx/jest:jest",
       "options": {
         "jestConfig": "{projectRoot}/jest.config.js",
-        "passWithNoTests": true
+        "passWithNoTests": true,
+        "runInBand": true
       }
     }
   },
