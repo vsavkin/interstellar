@@ -54,4 +54,4 @@ jobs:
         run: yarn nx run-many -t build,test,lint --parallel=3
 
       - name: Run e2e serially
-        run: yarn nx run-many -t e2e --parallel=1
+        run: yarn nx run-many -t e2e-ci --parallel=1

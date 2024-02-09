@@ -2,13 +2,6 @@
   "name": "ticket-booking-e2e",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "targets": {
-    "lint": {},
-    "e2e": {
-      "executor": "@nx/cypress:cypress",
-      "options": {
-        "cypressConfig": "apps/ticket-booking-e2e/cypress.config.ts",
-        "devServerTarget": "ticket-booking:serve"
-      }
-    }
+    "lint": {}
   }
 }

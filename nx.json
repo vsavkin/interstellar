@@ -49,7 +49,7 @@
       "dependsOn": ["export"],
       "options": {
         "watch": false,
-        "staticFilePath": "dist/{projectRoot}/exported"
+        "staticFilePath": "dist/{projectRoot}/.next"
       }
     },
     "build": {

@@ -2,13 +2,6 @@
   "name": "flight-simulator-e2e",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "targets": {
-    "lint": {},
-    "e2e": {
-      "executor": "@nx/cypress:cypress",
-      "options": {
-        "cypressConfig": "apps/flight-simulator-e2e/cypress.config.ts",
-        "devServerTarget": "flight-simulator:serve"
-      }
-    }
+    "lint": {}
   }
 }

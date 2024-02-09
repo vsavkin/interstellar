@@ -10,6 +10,7 @@ const nextConfig = {
     // See: https://github.com/gregberge/svgr
     svgr: true,
   },
+  output: 'export'
 };
 
 module.exports = withNx(nextConfig);
